@@ -1,0 +1,12 @@
+<?php
+use App\Filament\Filters\StatusFilter;
+
+class YourResource extends Resource
+{
+    public static function filters(): array
+    {
+        return [
+            StatusFilter::make(),
+        ];
+    }
+}

@@ -1,0 +1,20 @@
+<?php
+use Filament\Filters\Filter;
+
+class MyCustomFilter extends Filter
+{
+    public function apply($query, $data): void
+    {
+        // Ваша логіка фільтрації
+        $query->where('column_name', $data);
+    }
+
+    public function options(): array
+    {
+        // Варіанти для фільтра
+        return [
+            'Option 1' => 'value1',
+            'Option 2' => 'value2',
+        ];
+    }
+}
